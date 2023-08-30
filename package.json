@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@styled-icons/icomoon": "^10.46.0",
+    "@styled-icons/material": "^10.47.0",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -16,7 +19,18 @@
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
     "react": "18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "18.2.0",
+    "react-redux": "^8.1.2",
+    "react-use": "^17.4.0",
+    "redux": "^4.2.1",
+    "sharp": "^0.32.5",
+    "styled-components": "^6.0.7",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/react-burger-menu": "^2.8.3",
+    "@types/styled-components": "^5.1.26",
+    "prettier": "^3.0.3"
   }
 }
