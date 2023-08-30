@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import bigLogoPic from "@/../public/images/big-logo.webp";
 import Image from "next/image";
 import Button from "@/lib/components/button/button";
@@ -38,6 +38,18 @@ const FirstSection = () => {
   );
 };
 
+const upDownAnimation = keyframes`
+  0% {
+    top: 0
+  }
+  50% {
+    top: 15px
+  }
+  100% {
+    top: 0
+  }
+`;
+
 const ArrowImageContainer = styled.div`
   height: 0;
   overflow: visible;
@@ -55,9 +67,7 @@ const ArrowImageWrapper = styled.div`
   height: 102px;
   transition: 0.1s linear;
   cursor: pointer;
-  &:active {
-    transform: translateY(-10px);
-  }
+  animation: ${upDownAnimation} linear infinite 1000ms;
 `;
 
 const ImageWrapper = styled.div`
