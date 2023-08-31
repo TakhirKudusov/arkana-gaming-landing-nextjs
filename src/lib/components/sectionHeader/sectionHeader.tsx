@@ -4,10 +4,15 @@ import { mohave } from "@/lib/constants/fonts";
 
 type Props = {
   children: ReactNode;
+  className?: string;
 };
 
-const SectionHeader: FC<Props> = ({ children }) => {
-  return <HeaderText className={mohave.className}>{children}</HeaderText>;
+const SectionHeader: FC<Props> = ({ children, className }) => {
+  return (
+    <HeaderText className={`${mohave.className} ${className}`}>
+      {children}
+    </HeaderText>
+  );
 };
 
 const HeaderText = styled.h2`
