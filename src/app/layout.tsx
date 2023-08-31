@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/preview.png",
+        url: "https://arkana-gaming.com/images/preview.png",
         width: 980,
         height: 515,
       },
