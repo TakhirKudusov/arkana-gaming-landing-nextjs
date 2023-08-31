@@ -1,0 +1,43 @@
+name: Deploy Arkana landing page
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up remote server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.LANDING_HOST }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Проверка наличия репозитория
+            if [ -d "arkana-gaming-landing-nextjs" ]; then
+              cd arkana-gaming-landing-nextjs
+              git checkout main 
+              git pull
+              git fetch
+            else
+              git clone git@github.com:TakhirKudusov/arkana-gaming-landing-nextjs.git
+              cd arkana-gaming-landing-nextjs
+              git checkout main 
+              git fetch
+            fi
+            
+            docker build -t arkana-gaming-landing-nextjs -f src/services/Auth/Dockerfile .
+
+            docker stop arkana-gaming-landing-nextjs || true
+            docker rm arkana-gaming-landing-nextjs || true
+            
+            docker run -d -p 3000:3000 --name arkana-gaming-landing-nextjs arkana-gaming-landing-nextjs:latest
