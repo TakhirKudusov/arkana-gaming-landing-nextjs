@@ -9,10 +9,11 @@ import bannerPic from "@/../public/images/poster-mobile.png";
 import { mohave } from "@/lib/constants/fonts";
 import Link from "next/link";
 import { Route } from "@/lib/enums/route";
+import SingleSectionPageContainer from "@/lib/components/singleSectionPageContainer";
 
 const Games = () => {
   return (
-    <Container>
+    <SingleSectionPageContainer>
       <StyledHeader>games</StyledHeader>
       <ContentContainer>
         <BannerContainer>
@@ -30,7 +31,7 @@ const Games = () => {
           <Button buttonType={ButtonType.outlined}>read more</Button>
         </Link>
       </ContentContainer>
-    </Container>
+    </SingleSectionPageContainer>
   );
 };
 
@@ -73,35 +74,6 @@ const ContentContainer = styled.div`
 
 const StyledHeader = styled(SectionHeader)`
   width: 100%;
-`;
-
-const Container = styled.section`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  padding: 74px 87px 217px;
-  row-gap: 50px;
-  min-height: calc(100vh - 144px - 119px);
-  @media screen and (max-width: 1440px) {
-    padding: 74px 0 217px;
-  }
-  @media screen and (max-width: 1024px) {
-    min-height: calc(100vh - 123px - 122px);
-    padding: 65px 0 170px;
-  }
-  @media screen and (max-width: 768px) {
-    min-height: calc(100vh - 115px - 112px);
-    padding: 55px 0 140px;
-  }
-  @media screen and (max-width: 425px) {
-    min-height: calc(100vh - 108px - 104px);
-    padding: 48px 0 140px;
-    row-gap: 48px;
-  }
-  @media screen and (max-width: 425px) {
-    min-height: calc(100vh - 101px - 104px);
-  }
 `;
 
 export default Games;
