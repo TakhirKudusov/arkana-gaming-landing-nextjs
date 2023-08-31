@@ -20,6 +20,22 @@ export const metadata: Metadata = {
     "gaming",
     "online",
   ],
+  openGraph: {
+    title: "Arkana Gaming | Online slots provider",
+    description:
+      "We are a online slots software provider with focus on mobiles",
+    url: "https://arkana-gaming.com/",
+    siteName: "Arkana Gaming",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/preview.png",
+        width: 980,
+        height: 515,
+      },
+    ],
+  },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
