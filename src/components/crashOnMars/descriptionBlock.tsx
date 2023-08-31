@@ -3,6 +3,7 @@ import { mohave, montserrat } from "@/lib/constants/fonts";
 import planetPic from "@/../public/images/planet.webp";
 import Image from "next/image";
 import marsPic from "@/../public/images/mars.png";
+import crashOnMarsLogo from "@/../public/images/crashOnMarsLogo.png";
 
 const DescriptionBlock = () => {
   return (
@@ -42,7 +43,7 @@ const DescriptionBlock = () => {
           </DescriptionText>
         </TextBlock>
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer className="sm-column">
         <TextBlock>
           <SubHeader className={mohave.className}>on the board</SubHeader>
           <DescriptionText className={montserrat.className}>
@@ -51,18 +52,38 @@ const DescriptionBlock = () => {
             button is&nbsp;under the seat!
           </DescriptionText>
         </TextBlock>
-        <PlanetImageWrapper>
+        <CrashOnMarsLogoWrapper>
           <Image
-            src={planetPic}
-            alt="Cartoon planet image"
+            src={crashOnMarsLogo}
+            alt="Crash on Mars game logo"
             fill
             loading="lazy"
           />
-        </PlanetImageWrapper>
+        </CrashOnMarsLogoWrapper>
       </ContentContainer>
     </Container>
   );
 };
+
+const CrashOnMarsLogoWrapper = styled.div`
+  position: relative;
+  min-width: 320px;
+  height: 216px;
+  margin-left: 150px;
+  @media screen and (max-width: 1440px) {
+    margin-left: 75px;
+  }
+  @media screen and (max-width: 1024px) {
+    min-width: 250px;
+    height: 168px;
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 320px;
+    height: 216px;
+    margin-left: 0;
+  }
+`;
 
 const MarsImageWrapper = styled.div`
   position: relative;
@@ -70,6 +91,17 @@ const MarsImageWrapper = styled.div`
   min-width: 430px;
   height: 342px;
   transform: scale(-1, 1);
+  @media screen and (max-width: 1440px) {
+    margin-right: 50px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-right: 55px;
+    min-width: 300px;
+    height: 239px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const PlanetImageWrapper = styled.div`
@@ -77,6 +109,17 @@ const PlanetImageWrapper = styled.div`
   min-width: 433px;
   height: 433px;
   margin-left: 58px;
+  @media screen and (max-width: 1440px) {
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 1024px) {
+    min-width: 300px;
+    height: 300px;
+    margin-left: 25px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const DescriptionText = styled.p`
@@ -86,6 +129,9 @@ const DescriptionText = styled.p`
   line-height: 158.4%;
   &.reversed {
     text-align: end;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
   }
 `;
 
@@ -105,20 +151,45 @@ const TextBlock = styled.div`
   flex-direction: column;
   row-gap: 24px;
   height: fit-content;
+  @media screen and (max-width: 1024px) {
+    row-gap: 20px;
+  }
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &.sm-column {
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      row-gap: 60px;
+    }
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 1266px;
   row-gap: 120px;
-  margin-bottom: 74px;
+  margin-bottom: 150px;
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+    padding: 0 87px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0 65px;
+    margin-bottom: 120px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 50px;
+    row-gap: 103px;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 0 22px;
+  }
 `;
 
 export default DescriptionBlock;

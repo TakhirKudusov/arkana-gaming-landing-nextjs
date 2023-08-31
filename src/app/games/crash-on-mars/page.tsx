@@ -24,6 +24,12 @@ const Section = styled.section`
   align-items: center;
   width: 100%;
   padding: 74px 87px 284px;
+  @media screen and (max-width: 1440px) {
+    padding: 74px 0 284px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 48px 0 246px;
+  }
 `;
 
 export default CrashOnMars;
