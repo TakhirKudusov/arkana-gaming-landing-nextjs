@@ -57,11 +57,13 @@ const StyledButton = styled.button<{ buttonType: ButtonType }>`
           color: black;
           background-color: white;
           border: 1px black solid;
+
           &:hover {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.1);
           }
+
           &:active {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.2);
           }
         `;
     }

@@ -63,8 +63,15 @@ const MenuItem = styled.p`
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
+  transition: 100ms linear;
   @media screen and (max-width: 1024px) {
     font-size: 27px;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
   }
 `;
 

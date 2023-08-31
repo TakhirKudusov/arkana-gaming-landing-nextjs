@@ -70,6 +70,13 @@ const MenuItem = styled.p`
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
+  transition: 100ms linear;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
+  }
   @media screen and (max-width: 375px) {
     font-size: 24px;
   }
@@ -92,6 +99,13 @@ const CloseButton = styled.div`
   width: 45px;
   height: 45px;
   cursor: pointer;
+  transition: 100ms linear;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
+  }
   @media screen and (max-width: 375px) {
     width: 40px;
     height: 40px;
