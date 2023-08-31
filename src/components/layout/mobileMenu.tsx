@@ -11,13 +11,21 @@ import { Close } from "@styled-icons/material/Close";
 import { mohave } from "@/lib/constants/fonts";
 import Link from "next/link";
 import { Route } from "@/lib/enums/route";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const MobileMenu = () => {
   const dispatch = useAppDispatch();
 
+  const pathname = usePathname();
+
   const { isOpened } = useAppSelector<MobileMenuState>(
     (state) => state[SlicerName.MOBILE_MENU_STATE],
   );
+
+  useEffect(() => {
+    handleMenuClose();
+  }, [pathname]);
 
   const handleMenuClose = () => {
     dispatch(closeMenu());

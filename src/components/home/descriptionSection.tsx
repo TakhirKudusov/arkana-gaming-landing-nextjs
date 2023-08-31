@@ -40,6 +40,9 @@ const ImageBlock = styled.div<{ imagePath: string }>`
   @media screen and (max-width: 1024px) {
     height: 120px;
   }
+  @media screen and (max-width: 768px) {
+    height: 100px;
+  }
   @media screen and (max-width: 425px) {
     height: 85px;
   }
