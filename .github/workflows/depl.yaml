@@ -35,7 +35,7 @@ jobs:
               git fetch
             fi
             
-            docker build -t arkana-gaming-landing-nextjs -f src/services/Auth/Dockerfile .
+            docker build -t arkana-gaming-landing-nextjs -f Dockerfile .
 
             docker stop arkana-gaming-landing-nextjs || true
             docker rm arkana-gaming-landing-nextjs || true
