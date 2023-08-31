@@ -13,26 +13,42 @@ const Contacts = () => {
       <ContactList>
         <ContactText className={mohave.className}>
           GENERAL:{" "}
-          <Link href="mailto:info@arkana-gaming.com">
-            info@arkana-gaming.com
-          </Link>
+          <MailLinkWrapper>
+            <Link href="mailto:info@arkana-gaming.com">
+              info@arkana-gaming.com
+            </Link>
+          </MailLinkWrapper>
         </ContactText>
         <ContactText className={mohave.className}>
           SALES:{" "}
-          <Link href="mailto:sales@arkana-gaming.com">
-            sales@arkana-gaming.com
-          </Link>
+          <MailLinkWrapper>
+            <Link href="mailto:sales@arkana-gaming.com">
+              sales@arkana-gaming.com
+            </Link>
+          </MailLinkWrapper>
         </ContactText>
         <ContactText className={mohave.className}>
           MARKETING:{" "}
-          <Link href="mailto:marketing@arkana-gaming.com">
-            marketing@arkana-gaming.com
-          </Link>
+          <MailLinkWrapper>
+            <Link href="mailto:marketing@arkana-gaming.com">
+              marketing@arkana-gaming.com
+            </Link>
+          </MailLinkWrapper>
         </ContactText>
       </ContactList>
     </StyledContainer>
   );
 };
+
+const MailLinkWrapper = styled.span`
+  transition: 100ms linear;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+`;
 
 const ContactText = styled.p`
   color: #000;

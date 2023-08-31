@@ -18,6 +18,13 @@ const LogoContainer = styled.div`
   width: 168px;
   height: 81px;
   position: relative;
+  transition: 100ms linear;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.8;
+  }
   @media screen and (max-width: 1024px) {
     width: 143px;
     height: 69px;
