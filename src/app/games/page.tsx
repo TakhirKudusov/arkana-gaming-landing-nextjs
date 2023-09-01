@@ -73,7 +73,10 @@ const ContentContainer = styled.div`
 `;
 
 const StyledHeader = styled(SectionHeader)`
-  width: 100%;
+  width: 1266px;
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+  }
 `;
 
 export default Games;
