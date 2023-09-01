@@ -40,4 +40,4 @@ jobs:
             docker stop arkana-gaming-landing-nextjs || true
             docker rm arkana-gaming-landing-nextjs || true
             
-            docker run -d -p 3000:3000 --name arkana-gaming-landing-nextjs arkana-gaming-landing-nextjs:latest
+            docker run -d -p 3001:3001 --name arkana-gaming-landing-nextjs arkana-gaming-landing-nextjs:latest

@@ -10,6 +10,6 @@ RUN npm i
 
 RUN npm run build
 
-CMD ["npm", "start"]
+CMD ["npm", "start", "--", "--port", "3001"]
 
-EXPOSE 3000
+EXPOSE 3001
