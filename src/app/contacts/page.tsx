@@ -69,11 +69,11 @@ const ContactText = styled.p`
 const ContactList = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 1266px;
   row-gap: 48px;
   @media screen and (max-width: 1440px) {
     padding: 0 87px;
-    row-gap: 40px;
+    width: 100%;
   }
   @media screen and (max-width: 1024px) {
     padding: 0 64px;
@@ -89,7 +89,10 @@ const ContactList = styled.div`
 `;
 
 const StyledHeader = styled(SectionHeader)`
-  width: 100%;
+  width: 1266px;
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+  }
 `;
 
 const StyledContainer = styled(SingleSectionPageContainer)`
