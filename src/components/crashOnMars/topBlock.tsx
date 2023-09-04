@@ -9,7 +9,10 @@ const TopBlock = () => {
       <SectionHeader>crash on mars</SectionHeader>
       <ContentContainer>
         <ImageBlock />
-        <Link href="https://arkana-gaming.com/frame" target="_blank">
+        <Link
+          href="https://games.arkana-gaming.com/crash-on-mars"
+          target="_blank"
+        >
           <Button>try it</Button>
         </Link>
       </ContentContainer>
