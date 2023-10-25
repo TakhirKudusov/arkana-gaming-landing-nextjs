@@ -10,7 +10,7 @@ const TopBlock = () => {
       <ContentContainer>
         <ImageBlock />
         <Link
-          href="https://games.arkana-gaming.com/crash-on-mars"
+          href="https://webapp.arkana-gaming.com/crash-on-mars"
           target="_blank"
         >
           <Button>try it</Button>

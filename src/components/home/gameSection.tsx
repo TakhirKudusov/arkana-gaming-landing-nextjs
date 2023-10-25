@@ -48,7 +48,7 @@ const GameSection = () => {
           <Button buttonType={ButtonType.outlined}>read more</Button>
         </Link>
         <Link
-          href="https://games.arkana-gaming.com/crash-on-mars"
+          href="https://webapp.arkana-gaming.com/crash-on-mars"
           target="_blank"
         >
           <Button>try it</Button>
